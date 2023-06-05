@@ -2,15 +2,24 @@
 """
 Created on Mon Jun  5 16:29:52 2023
 
-@author: Pourya
+@author: Pourya Mazaheri
 """
 
+import string
+import random
+
 # password generator
-def hello():
-    return "hello world"
-    
+def generate_pass(digit):
+    pull = ''
+    for i in range(digit):
+        pull += random.choice(string.ascii_letters)
+    print(pull)
     
 
-if __name__ == "main.py":
-    hello()
+if __name__ == '__main__':
+    try:
+        digits = int(input('Enter an Integer ='))
+    except:
+        print('enter an integer')
     
+    generate_pass(digits)
